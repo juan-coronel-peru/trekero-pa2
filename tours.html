@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explora una propuesta de tour a Machu Picchu, una imagen interactiva y una tabla del recorrido.">
+  <meta name="author" content="Juan Carlos Coronel Santos">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Tours | TreKero</title>
+  <link rel="icon" type="image/svg+xml" href="imagenes/favicon.svg">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <!-- La misma cabecera permite navegar entre las páginas. -->
+  <header class="cabecera">
+    <div class="contenedor barra">
+      <a class="marca" href="index.html" aria-label="TreKero: ir al inicio">
+        <img class="logo" src="imagenes/logo-trekero.svg" alt="TreKero" width="248" height="58">
+      </a>
+      <nav aria-label="Menú principal">
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="tours.html" aria-current="page">Tours</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="contenedor" id="contenido">
+    <section class="titulo-pagina">
+      <p class="etiqueta">NUESTRO DESTINO</p>
+      <h1>Tour a Machu Picchu</h1>
+      <p>Una propuesta para disfrutar de la historia, los paisajes y la cultura andina.</p>
+    </section>
+    <section class="dos-columnas" aria-labelledby="viaje">
+      <figure>
+        <div class="foto-marco">
+          <!-- El navegador elige una imagen según el formato y el ancho disponible. -->
+          <picture>
+            <source type="image/webp" srcset="imagenes/machu-picchu-320.webp 320w, imagenes/machu-picchu-580.webp 580w" sizes="(min-width: 1200px) 520px, (min-width: 760px) 43vw, 90vw">
+            <img class="foto" src="imagenes/machu-picchu-580.jpg" srcset="imagenes/machu-picchu-320.jpg 320w, imagenes/machu-picchu-580.jpg 580w" sizes="(min-width: 1200px) 520px, (min-width: 760px) 43vw, 90vw" alt="Vista ilustrativa de Machu Picchu rodeado de montañas" width="580" height="420">
+          </picture>
+        </div>
+        <figcaption>Machu Picchu: imagen ilustrativa generada para esta práctica.</figcaption>
+      </figure>
+      <div>
+        <h2 id="viaje">Un viaje para conocer</h2>
+        <p>Con TreKero te invitamos a descubrir Machu Picchu y su entorno.</p>
+        <ul>
+          <li>Observar los paisajes de las montañas.</li>
+          <li>Conocer las construcciones de piedra.</li>
+          <li>Disfrutar la visita con respeto por el lugar.</li>
+        </ul>
+        <a class="boton" href="contacto.html">Consultar el tour</a>
+        <p class="nota" style="margin-top: 16px;">Los servicios, precios, horarios e ingresos deben confirmarse antes de una reserva. Esta página no anuncia disponibilidad real.</p>
+      </div>
+    </section>
+    <section id="ruta" aria-labelledby="titulo-ruta">
+      <h2 id="titulo-ruta">Explora una ruta de ejemplo</h2>
+      <p>Haz clic o toca una etapa de la imagen. Se resaltará su explicación en la tabla.</p>
+      <p class="nota">[SUPUESTO] Recorrido propuesto para el trabajo académico. El dibujo es un esquema: no es un mapa geográfico ni muestra todas las conexiones.</p>
+      <div class="ruta-tabla">
+        <figure class="ruta-imagen">
+          <!-- usemap conecta la imagen con el nombre del map. Cada area tiene su enlace. -->
+          <img src="imagenes/ruta.png" alt="Ruta interactiva de ejemplo: Cusco, Ollantaytambo y Machu Picchu" width="260" height="350" usemap="#mapa-ruta">
+          <map name="mapa-ruta" id="mapa-ruta">
+            <area shape="rect" coords="15,48,245,118" href="#etapa-cusco" alt="Leer la etapa de Cusco">
+            <area shape="rect" coords="15,142,245,212" href="#etapa-ollantaytambo" alt="Leer la etapa de Ollantaytambo">
+            <area shape="rect" coords="15,236,245,306" href="#etapa-machu" alt="Leer la etapa de Machu Picchu">
+          </map>
+          <figcaption>Imagen interactiva con tres zonas de enlace.</figcaption>
+        </figure>
+        <div>
+          <p>También puedes ir a: <a href="#etapa-cusco">Cusco</a> · <a href="#etapa-ollantaytambo">Ollantaytambo</a> · <a href="#etapa-machu">Machu Picchu</a>.</p>
+          <div class="tabla-scroll" role="region" aria-label="Tabla de etapas del recorrido" tabindex="0">
+            <table>
+              <caption>Etapas de una ruta de ejemplo</caption>
+              <thead>
+                <tr><th scope="col">Etapa</th><th scope="col">Lugar</th><th scope="col">Actividad propuesta</th></tr>
+              </thead>
+              <tbody>
+                <tr id="etapa-cusco"><th scope="row">1</th><td>Cusco</td><td>Inicio del recorrido y coordinación del viaje.</td></tr>
+                <tr id="etapa-ollantaytambo"><th scope="row">2</th><td>Ollantaytambo</td><td>Punto de conexión en la ruta propuesta.</td></tr>
+                <tr id="etapa-machu"><th scope="row">3</th><td>Machu Picchu</td><td>Visita al destino principal del tour.</td></tr>
+                <tr><th scope="row">4</th><td>Retorno</td><td>Regreso según los servicios acordados.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="nota" style="margin-top: 16px;">En el celular, desplaza la tabla hacia los lados si es necesario.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="pie">TreKero · Cusco, Perú · Proyecto académico de Diseño Web</footer>
+</body>
+</html>

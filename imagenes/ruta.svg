@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="350" viewBox="0 0 260 350">
+<rect width="260" height="350" rx="8" fill="#f1ecdf"/>
+<g font-family="Arial, sans-serif">
+<text x="130" y="29" text-anchor="middle" font-size="14" font-weight="bold" fill="#293653">RUTA DE EJEMPLO</text>
+<path d="M130 100V285" stroke="#c69532" stroke-width="4" stroke-dasharray="7 6"/>
+<rect x="15" y="48" width="230" height="70" rx="6" fill="#293653"/>
+<rect x="15" y="142" width="230" height="70" rx="6" fill="#a1323b"/>
+<rect x="15" y="236" width="230" height="70" rx="6" fill="#293653"/>
+<g fill="white"><circle cx="43" cy="83" r="15"/><circle cx="43" cy="177" r="15"/><circle cx="43" cy="271" r="15"/></g>
+<g text-anchor="middle" font-size="16" fill="#293653"><text x="43" y="89">1</text><text x="43" y="183">2</text><text x="43" y="277">3</text></g>
+<g fill="white" font-size="16" font-weight="bold"><text x="70" y="80">Cusco</text><text x="70" y="174">Ollantaytambo</text><text x="70" y="268">Machu Picchu</text></g>
+<g fill="white" font-size="12"><text x="70" y="101">Punto de partida</text><text x="70" y="195">Continuamos el recorrido</text><text x="70" y="289">Nuestro destino</text></g>
+<text x="130" y="333" text-anchor="middle" font-size="12" fill="#536076">Pulsa una etapa para leer más</text>
+</g></svg>

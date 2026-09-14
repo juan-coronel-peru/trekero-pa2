@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TreKero: agencia de viajes especializada en tours a Machu Picchu. Proyecto académico.">
+  <meta name="author" content="Juan Carlos Coronel Santos">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Inicio | TreKero</title>
+  <link rel="icon" type="image/svg+xml" href="imagenes/favicon.svg">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <!-- La misma cabecera permite navegar entre las páginas. -->
+  <header class="cabecera">
+    <div class="contenedor barra">
+      <a class="marca" href="index.html" aria-label="TreKero: ir al inicio">
+        <img class="logo" src="imagenes/logo-trekero.svg" alt="TreKero" width="248" height="58">
+      </a>
+      <nav aria-label="Menú principal">
+        <ul class="menu">
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="contenedor" id="contenido">
+    <section class="portada" aria-labelledby="titulo-inicio">
+      <div>
+        <p class="etiqueta">AGENCIA DE VIAJES</p>
+        <h1 id="titulo-inicio">Machu Picchu<br>con <span>TreKero</span></h1>
+        <p>Un viaje para conocer, disfrutar y recordar los Andes.</p>
+        <p>Somos una agencia especializada en tours a Machu Picchu. Explora nuestra propuesta y empieza a imaginar tu próxima visita.</p>
+        <a class="boton" href="tours.html">Conocer el tour</a>
+      </div>
+      <figure>
+        <div class="foto-marco">
+          <!-- El navegador elige una imagen según el formato y el ancho disponible. -->
+          <picture>
+            <source type="image/webp" srcset="imagenes/machu-picchu-320.webp 320w, imagenes/machu-picchu-580.webp 580w" sizes="(min-width: 1200px) 520px, (min-width: 760px) 43vw, 90vw">
+            <img class="foto" src="imagenes/machu-picchu-580.jpg" srcset="imagenes/machu-picchu-320.jpg 320w, imagenes/machu-picchu-580.jpg 580w" sizes="(min-width: 1200px) 520px, (min-width: 760px) 43vw, 90vw" alt="Vista ilustrativa de Machu Picchu rodeado de montañas" width="580" height="420">
+          </picture>
+        </div>
+        <figcaption>Machu Picchu: imagen ilustrativa generada para esta práctica.</figcaption>
+      </figure>
+    </section>
+    <section aria-labelledby="propuesta">
+      <h2 id="propuesta">Conoce nuestra propuesta</h2>
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <span class="numero">01</span>
+          <h3>Una agencia cercana</h3>
+          <p>Conoce a Juan Carlos Coronel, fundador de TreKero.</p>
+          <a href="nosotros.html">Sobre nosotros</a>
+        </article>
+        <article class="tarjeta">
+          <span class="numero">02</span>
+          <h3>Un destino especial</h3>
+          <p>Descubre el tour y explora una ruta de ejemplo.</p>
+          <a href="tours.html#ruta">Explorar la ruta</a>
+        </article>
+        <article class="tarjeta">
+          <span class="numero">03</span>
+          <h3>Tu idea de viaje</h3>
+          <p>Prueba el formulario con la fecha y el viaje que imaginas.</p>
+          <a href="contacto.html">Abrir el formulario</a>
+        </article>
+      </div>
+    </section>
+    <section class="recuadro" aria-labelledby="idea">
+      <h2 id="idea">Tu viaje empieza con una idea</h2>
+      <ol>
+        <li>Conoce nuestra propuesta de tour.</li>
+        <li>Elige la fecha en la que te gustaría viajar.</li>
+        <li>Consulta los detalles antes de confirmar una reserva.</li>
+      </ol>
+    </section>
+  </main>
+  <footer class="pie">TreKero · Cusco, Perú · Proyecto académico de Diseño Web</footer>
+</body>
+</html>
