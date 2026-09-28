@@ -9,6 +9,7 @@
   <title>Tours | TreKero</title>
   <link rel="icon" type="image/svg+xml" href="imagenes/favicon.svg">
   <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <a class="saltar" href="#contenido">Saltar al contenido</a>
@@ -24,6 +25,7 @@
           <li><a href="nosotros.html">Nosotros</a></li>
           <li><a href="tours.html" aria-current="page">Tours</a></li>
           <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="carrito.html">Carrito (<span class="contador-carrito">0</span>)</a></li>
         </ul>
       </nav>
     </div>
@@ -53,9 +55,37 @@
           <li>Conocer las construcciones de piedra.</li>
           <li>Disfrutar la visita con respeto por el lugar.</li>
         </ul>
-        <a class="boton" href="contacto.html">Consultar el tour</a>
+        <a class="boton" href="#catalogo">Ver productos de prueba</a>
         <p class="nota" style="margin-top: 16px;">Los servicios, precios, horarios e ingresos deben confirmarse antes de una reserva. Esta página no anuncia disponibilidad real.</p>
       </div>
+    </section>
+    <section id="catalogo" aria-labelledby="titulo-catalogo">
+      <p class="etiqueta">ELIGE Y AGREGA</p>
+      <h2 id="titulo-catalogo">Arma tu viaje de prueba</h2>
+      <p class="nota aviso-demo">[SUPUESTO] Productos y precios ficticios en dólares (USD), solo para esta práctica. No son cotizaciones ni disponibilidad real de TreKero.</p>
+      <div class="filtros">
+        <div class="campo">
+          <label for="buscar">Buscar en el catálogo</label>
+          <input type="search" id="buscar" placeholder="Ejemplo: Machu Picchu" aria-describedby="ayuda-buscar">
+          <small id="ayuda-buscar">Escribe para filtrar. Presiona Escape para limpiar la búsqueda.</small>
+        </div>
+        <div class="campo">
+          <label for="ordenar">Ordenar productos</label>
+          <select id="ordenar">
+            <option value="original">Orden original</option>
+            <option value="menor">Menor precio primero</option>
+            <option value="mayor">Mayor precio primero</option>
+          </select>
+        </div>
+      </div>
+      <p id="resultado-busqueda" class="nota" role="status"></p>
+      <div id="productos" class="tarjetas productos"></div>
+      <noscript><p>Activa JavaScript para usar el catálogo y el carrito de esta práctica.</p></noscript>
+      <p class="enlace-carrito"><a class="boton boton-secundario" href="carrito.html">Revisar mi carrito</a></p>
+      <details class="practica-eventos">
+        <summary>Ver cómo se procesa un clic (práctica de eventos)</summary>
+        <p id="detalle-evento">Pulsa un botón Agregar. Aquí verás la captura, el objetivo y el burbujeo.</p>
+      </details>
     </section>
     <section id="ruta" aria-labelledby="titulo-ruta">
       <h2 id="titulo-ruta">Explora una ruta de ejemplo</h2>
@@ -94,5 +124,7 @@
     </section>
   </main>
   <footer class="pie">TreKero · Cusco, Perú · Proyecto académico de Diseño Web</footer>
+  <p id="aviso" class="aviso" role="status" aria-live="polite" hidden></p>
+  <button id="volver-arriba" class="volver-arriba" type="button" hidden>Volver arriba</button>
 </body>
 </html>

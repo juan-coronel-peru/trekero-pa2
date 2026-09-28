@@ -9,6 +9,7 @@
   <title>Confirmación de prueba | TreKero</title>
   <link rel="icon" type="image/svg+xml" href="imagenes/favicon.svg">
   <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <a class="saltar" href="#contenido">Saltar al contenido</a>
@@ -24,21 +25,24 @@
           <li><a href="nosotros.html">Nosotros</a></li>
           <li><a href="tours.html">Tours</a></li>
           <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="carrito.html">Carrito (<span class="contador-carrito">0</span>)</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main class="contenedor" id="contenido">
     <section class="recuadro confirmacion" aria-labelledby="titulo-confirmacion">
-      <p class="etiqueta">DEMOSTRACIÓN LOCAL</p>
-      <h1 id="titulo-confirmacion">Página de confirmación de prueba</h1>
-      <p>Si llegaste aquí desde el formulario, el navegador ha comprobado los campos obligatorios y ha abierto esta página.</p>
-      <p>Los datos ficticios enviados con el método GET aparecen en la dirección del navegador. Esta página no los procesa ni los almacena.</p>
-      <p><strong>No se ha enviado ningún correo ni se ha realizado una reserva.</strong> Para atender consultas reales se necesita conectar el formulario a un servicio de recepción.</p>
-      <a class="boton" href="index.html">Volver al inicio</a>
-      <p style="margin-top: 20px;"><a href="contacto.html">Hacer otra prueba</a></p>
+      <p class="etiqueta">RESULTADO DE LA PRÁCTICA</p>
+      <h1 id="titulo-confirmacion">Confirmación de prueba</h1>
+      <p id="texto-confirmacion">Todavía no hay una operación de prueba registrada en esta pestaña.</p>
+      <div id="detalle-confirmacion"></div>
+      <p><strong>No se ha realizado ningún pago, reserva ni envío de correo.</strong> Este sitio no está conectado a una pasarela de pagos o a un servidor de reservas.</p>
+      <a class="boton" href="tours.html#catalogo">Volver al catálogo</a>
+      <p class="separacion"><a href="contacto.html">Probar el formulario de contacto</a></p>
     </section>
   </main>
   <footer class="pie">TreKero · Cusco, Perú · Proyecto académico de Diseño Web</footer>
+  <p id="aviso" class="aviso" role="status" aria-live="polite" hidden></p>
+  <button id="volver-arriba" class="volver-arriba" type="button" hidden>Volver arriba</button>
 </body>
 </html>

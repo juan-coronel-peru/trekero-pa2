@@ -1,4 +1,4 @@
-/* TreKero - PA2. Hoja compartida por todas las páginas. */
+/* TreKero - Base PA2 ampliada para el Consolidado 2 con JavaScript. */
 :root {
   --azul: #293653;
   --rojo: #a1323b;
@@ -195,4 +195,48 @@ textarea { min-height: 120px; resize: vertical; }
 @media (prefers-reduced-motion: reduce) {
   .foto, .boton, .menu a { transition: none; }
   .foto-marco:hover .foto, .boton:hover, .boton:focus-visible { transform: none; }
+}
+
+/* CONSOLIDADO 2: catálogo, carrito y mensajes controlados con JavaScript.
+   Se conservan la paleta, el logo y los estilos del PA2. */
+[hidden] { display: none !important; }
+button, input, select, textarea { font: inherit; }
+button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+.filtros { display: grid; gap: 20px; margin: 22px 0 12px; }
+.filtros small { display: block; color: #536076; font-size: 0.82rem; margin-top: 6px; }
+.producto { display: flex; flex-direction: column; }
+.producto .precio { color: var(--rojo); font-weight: bold; font-size: 1.5rem; margin-top: auto; }
+.producto .boton { width: 100%; }
+.enlace-carrito, .separacion { margin-top: 22px; }
+.boton-secundario { color: var(--azul); background: #f1ecdf; border: 1px solid #b4a98e; }
+.boton-secundario:hover, .boton-secundario:focus-visible { color: white; }
+.aviso-demo { border-left: 4px solid var(--rojo); padding: 10px 16px; background: #f1ecdf; }
+.practica-eventos { padding: 14px 18px; background: white; border: 1px solid #d6d8de; }
+.practica-eventos summary { cursor: pointer; font-weight: bold; }
+.practica-eventos p { margin: 12px 0 0; }
+.carrito-layout { display: grid; gap: 30px; align-items: start; }
+.carrito-layout > *, .filtros > * { min-width: 0; }
+.lista-carrito { display: grid; gap: 18px; margin-bottom: 22px; }
+.fila-carrito { padding: 22px; background: white; border-top: 4px solid var(--ocre); }
+.fila-carrito h3 { margin: 0 0 8px; }
+.control-cantidad { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.cantidad-botones { display: flex; align-items: center; gap: 6px; }
+.cantidad-botones input { width: 72px; text-align: center; padding: 8px; }
+.cantidad-botones button { width: 44px; height: 44px; border: 1px solid #969ca7; background: #faf8f2; color: var(--azul); cursor: pointer; }
+.subtotal { margin: 0; }
+.quitar { padding: 10px 0; border: 0; background: none; color: var(--rojo); text-decoration: underline; cursor: pointer; }
+.resumen-carrito { background: #f1ecdf; border-top: 4px solid var(--rojo); padding: 24px; }
+.total-carrito { font-size: 1.3rem; font-weight: bold; color: var(--azul); }
+.resumen-carrito .boton { width: 100%; margin: 6px 0; }
+.error-formulario { color: #922634; font-weight: bold; }
+[aria-invalid="true"] { border-color: #922634; border-width: 2px; }
+.aviso { position: fixed; bottom: 80px; left: 5%; right: 5%; max-width: 700px; margin: auto; padding: 15px 20px; background: var(--azul); color: white; z-index: 20; border-radius: 4px; box-shadow: 0 4px 16px #0003; }
+.volver-arriba { position: fixed; bottom: 18px; right: 5%; min-height: 44px; padding: 8px 14px; border: 1px solid #536076; background: white; color: var(--azul); cursor: pointer; z-index: 10; border-radius: 3px; }
+@media (min-width: 760px) {
+  .filtros { grid-template-columns: 2fr 1fr; }
+  .carrito-layout { grid-template-columns: minmax(0, 1.7fr) minmax(280px, 1fr); }
+}
+@media (max-width: 380px) {
+  .menu a { padding: 8px; font-size: 0.92rem; }
+  .resumen-carrito, .fila-carrito, .formulario { padding: 18px; }
 }

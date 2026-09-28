@@ -9,6 +9,7 @@
   <title>Inicio | TreKero</title>
   <link rel="icon" type="image/svg+xml" href="imagenes/favicon.svg">
   <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <a class="saltar" href="#contenido">Saltar al contenido</a>
@@ -24,6 +25,7 @@
           <li><a href="nosotros.html">Nosotros</a></li>
           <li><a href="tours.html">Tours</a></li>
           <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="carrito.html">Carrito (<span class="contador-carrito">0</span>)</a></li>
         </ul>
       </nav>
     </div>
@@ -35,7 +37,7 @@
         <h1 id="titulo-inicio">Machu Picchu<br>con <span>TreKero</span></h1>
         <p>Un viaje para conocer, disfrutar y recordar los Andes.</p>
         <p>Somos una agencia especializada en tours a Machu Picchu. Explora nuestra propuesta y empieza a imaginar tu próxima visita.</p>
-        <a class="boton" href="tours.html">Conocer el tour</a>
+        <a class="boton" href="tours.html#catalogo">Ver tours y carrito</a>
       </div>
       <figure>
         <div class="foto-marco">
@@ -60,8 +62,8 @@
         <article class="tarjeta">
           <span class="numero">02</span>
           <h3>Un destino especial</h3>
-          <p>Descubre el tour y explora una ruta de ejemplo.</p>
-          <a href="tours.html#ruta">Explorar la ruta</a>
+          <p>Revisa nuestros productos de ejemplo y agrégalos al carrito.</p>
+          <a href="tours.html#catalogo">Ver catálogo de prueba</a>
         </article>
         <article class="tarjeta">
           <span class="numero">03</span>
@@ -74,12 +76,14 @@
     <section class="recuadro" aria-labelledby="idea">
       <h2 id="idea">Tu viaje empieza con una idea</h2>
       <ol>
-        <li>Conoce nuestra propuesta de tour.</li>
-        <li>Elige la fecha en la que te gustaría viajar.</li>
-        <li>Consulta los detalles antes de confirmar una reserva.</li>
+        <li>Conoce nuestros tours y complementos de ejemplo.</li>
+        <li>Agrega productos y ajusta las cantidades en el carrito.</li>
+        <li>Comprueba el total y realiza una compra de prueba, sin pagos reales.</li>
       </ol>
     </section>
   </main>
   <footer class="pie">TreKero · Cusco, Perú · Proyecto académico de Diseño Web</footer>
+  <p id="aviso" class="aviso" role="status" aria-live="polite" hidden></p>
+  <button id="volver-arriba" class="volver-arriba" type="button" hidden>Volver arriba</button>
 </body>
 </html>

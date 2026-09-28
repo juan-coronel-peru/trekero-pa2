@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TreKero: agencia de viajes especializada en tours a Machu Picchu. Proyecto académico.">
+  <meta name="author" content="Juan Carlos Coronel Santos">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Carrito de compras | TreKero</title>
+  <link rel="icon" type="image/svg+xml" href="imagenes/favicon.svg">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <!-- La misma cabecera permite navegar entre las páginas. -->
+  <header class="cabecera">
+    <div class="contenedor barra">
+      <a class="marca" href="index.html" aria-label="TreKero: ir al inicio">
+        <img class="logo" src="imagenes/logo-trekero.svg" alt="TreKero" width="248" height="58">
+      </a>
+      <nav aria-label="Menú principal">
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="carrito.html" aria-current="page">Carrito (<span class="contador-carrito">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="contenedor" id="contenido">
+    <section class="titulo-pagina">
+      <p class="etiqueta">TU SELECCIÓN</p>
+      <h1>Carrito de compras</h1>
+      <p>Modifica las cantidades y comprueba cómo cambia el total.</p>
+      <p class="nota">Demostración académica. Precios ficticios en USD; no se realizan cobros ni reservas.</p>
+    </section>
+    <section class="carrito-layout" aria-labelledby="titulo-carrito">
+      <div>
+        <h2 id="titulo-carrito">Productos seleccionados</h2>
+        <p id="carrito-vacio" class="recuadro">Todavía no tienes productos. <a href="tours.html#catalogo">Ir al catálogo</a>.</p>
+        <div id="lista-carrito" class="lista-carrito"></div>
+        <noscript><p>Activa JavaScript para utilizar el carrito.</p></noscript>
+        <p id="estado-almacenamiento" class="nota">El carrito guarda solo identificadores y cantidades en este navegador. No almacena datos personales.</p>
+        <p><a href="tours.html#catalogo">Seguir eligiendo productos</a></p>
+      </div>
+      <aside class="resumen-carrito" aria-labelledby="titulo-resumen">
+        <h2 id="titulo-resumen">Resumen de prueba</h2>
+        <p><span id="unidades-total">0</span> unidades en el carrito</p>
+        <p class="total-carrito">Total: <strong id="total-carrito">US$ 0.00</strong></p>
+        <p class="nota">El total es la suma de precios por cantidades. Sin cobros, impuestos ni cargos adicionales en esta simulación.</p>
+        <div class="aceptar">
+          <input type="checkbox" id="aceptar-demo">
+          <label for="aceptar-demo">Entiendo que es una compra de prueba, sin reserva ni pago real.</label>
+        </div>
+        <button id="comprar" class="boton" type="button" disabled>Simular compra</button>
+        <button id="vaciar" class="boton boton-secundario" type="button" disabled>Vaciar carrito</button>
+        <p id="estado-compra" role="status" class="nota"></p>
+      </aside>
+    </section>
+  </main>
+  <footer class="pie">TreKero · Cusco, Perú · Proyecto académico de Diseño Web</footer>
+  <p id="aviso" class="aviso" role="status" aria-live="polite" hidden></p>
+  <button id="volver-arriba" class="volver-arriba" type="button" hidden>Volver arriba</button>
+</body>
+</html>

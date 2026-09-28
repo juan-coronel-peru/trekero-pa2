@@ -9,6 +9,7 @@
   <title>Contacto | TreKero</title>
   <link rel="icon" type="image/svg+xml" href="imagenes/favicon.svg">
   <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <a class="saltar" href="#contenido">Saltar al contenido</a>
@@ -24,6 +25,7 @@
           <li><a href="nosotros.html">Nosotros</a></li>
           <li><a href="tours.html">Tours</a></li>
           <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+          <li><a href="carrito.html">Carrito (<span class="contador-carrito">0</span>)</a></li>
         </ul>
       </nav>
     </div>
@@ -41,11 +43,11 @@
         <div class="recuadro">
           <h3>Formulario de práctica</h3>
           <p id="aviso-formulario">Usa datos ficticios. Esta demostración comprueba los campos y abre una página de confirmación local. No envía correos, no guarda reservas ni comunica datos a la agencia.</p>
-          <p class="nota">Al continuar, los datos de ejemplo aparecen en la dirección del navegador. No ingreses información personal real.</p>
+          <p class="nota">La consulta se valida en el navegador. No ingreses información personal real: los campos no se envían a ningún servidor.</p>
         </div>
       </div>
-      <!-- required, type y min activan la validación del navegador sin JavaScript. -->
-      <form class="formulario" action="confirmacion.html" method="get" aria-describedby="aviso-formulario">
+      <!-- JavaScript complementa la validación HTML y evita enviar el formulario. -->
+      <form id="formulario-contacto" class="formulario" action="#" method="post" aria-describedby="aviso-formulario">
         <p class="nota">Todos los campos son obligatorios. Utiliza información de ejemplo.</p>
         <div class="campos">
           <div class="campo">
@@ -62,7 +64,7 @@
           </div>
           <div class="campo">
             <label for="viajeros">Número de viajeros</label>
-            <input type="number" id="viajeros" name="viajeros" required min="1" step="1" placeholder="2">
+            <input type="number" id="viajeros" name="viajeros" required min="1" max="20" step="1" placeholder="2">
           </div>
           <div class="campo ancho-completo">
             <label for="consulta">Tipo de consulta</label>
@@ -82,10 +84,15 @@
           <input type="checkbox" id="practica" name="practica" value="si" required>
           <label for="practica">Entiendo que es una prueba y que no se realiza una reserva.</label>
         </div>
-        <button class="boton" type="submit">Probar formulario</button>
+        <p id="ayuda-campo" class="nota" aria-live="polite">Completa los campos con datos ficticios.</p>
+        <p id="error-formulario" class="error-formulario" role="alert"></p>
+        <button class="boton" type="submit" disabled>Probar formulario</button>
+        <noscript><p>Activa JavaScript para validar esta consulta de prueba.</p></noscript>
       </form>
     </section>
   </main>
   <footer class="pie">TreKero · Cusco, Perú · Proyecto académico de Diseño Web</footer>
+  <p id="aviso" class="aviso" role="status" aria-live="polite" hidden></p>
+  <button id="volver-arriba" class="volver-arriba" type="button" hidden>Volver arriba</button>
 </body>
 </html>
